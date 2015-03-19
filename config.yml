@@ -1,0 +1,10 @@
+# SetExpScale 2.0
+# Author Dablakbandit
+# Use: Normal/Custom/Advanced(coming soon)
+Use: Custom
+
+# Scale: Amount to Level up
+# Dropped_Ratio: % Dropped when a player dies
+Custom:
+  Scale: 17.0
+  Dropped_Ratio: 0.75
