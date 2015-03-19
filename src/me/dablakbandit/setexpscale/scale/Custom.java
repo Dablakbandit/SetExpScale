@@ -6,7 +6,7 @@ public class Custom extends Scale{
 
 	private static Custom custom = new Custom();
 	
-	private double scale = 17.0, ratio = 0.75, bar = 1/17.0;
+	private double scale = 17.0, ratio = 0.75;
 	
 	private Custom(){
 		
@@ -18,8 +18,6 @@ public class Custom extends Scale{
 	
 	public void setScale(double d){
 		scale = d;
-		bar = 1/d;
-		System.out.print(bar);
 	}
 	
 	public void setRatio(double d){
