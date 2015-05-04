@@ -33,13 +33,13 @@ public class Custom extends Scale{
 		p.setExp(percentset);//Set the percentage in bar
 	}
 	
-	private double getExp(Player p){
+	public int getExp(Player p){
 		double percent = p.getExp();//Percentage in bar currently
 		int level = p.getLevel();//We set this the last time they got exp
 		double totalset = level * this.scale;//Times by the double to get exp to add later
 		double curpercent = (percent*this.scale);//Gets the current % they have
 		totalset = totalset + curpercent;//Add the current % they have
-		return totalset;
+		return (int)totalset;
 	}
 
 	@Override
@@ -64,5 +64,12 @@ public class Custom extends Scale{
 	@Override
 	public int getDroppedAmount(Player player) {
 		return (int)(getExp(player)*ratio);//Change the dropped amount to work with the Scale
+	}
+
+	@Override
+	public int getExpToLevel(Player p) {
+		double percent = p.getExp();//Percentage in bar currently
+		double curpercent = (percent*this.scale);//Gets the current % they have
+		return (int)(this.scale - curpercent);
 	}
 }

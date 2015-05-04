@@ -37,4 +37,14 @@ public class Normal extends Scale{
 		}
 		return (i);
 	}
+
+	@Override
+	public int getExp(Player player) {
+		return player.getTotalExperience();
+	}
+
+	@Override
+	public int getExpToLevel(Player player) {
+		return player.getExpToLevel();
+	}
 }
